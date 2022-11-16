@@ -32,16 +32,17 @@ describe('unit Tests', function () {
 
     });
     it('default port should be 5000', function () {
+        const backup = process.env.APP_CONFIG;
+        process.env.APP_CONFIG =  process.env.APP_CONFIG1;
+        deleteAppConfig();
         let configs = getConfigs();
-        _verifyConfigs(configs);
-        configs = getConfigs();
-        // call verify config second time
-        _verifyConfigs(configs);
+        expect(configs.port).to.eql('5000');
+        process.env.APP_CONFIG = backup;
     });
 });
 
 function _verifyConfigs(configs) {
-    expect(configs.port).to.eql('5000');
+    expect(configs.port).to.eql('3000');
     expect(configs.authKey.length).to.eql(24);
     expect(configs.mysql.port).to.eql('3306');
     expect(configs.mysql.user.length).to.gt(0);
