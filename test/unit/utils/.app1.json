@@ -1,5 +1,4 @@
 {
-  "port": "3000",
   "authKey": "YWxhZGRpbjpvcGVuc2VzYW1l",
   "allowPublicAccess": false,
   "mysql": {
