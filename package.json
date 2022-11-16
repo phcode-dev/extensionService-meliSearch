@@ -36,7 +36,8 @@
     "createJSDocs": "node build/jsDocGenerate.js src docs/generatedApiDocs && git add docs",
     "bumpPatchVersion": "npm --no-git-tag-version version patch",
     "bumpPatchVersionWithGitTag": "npm version patch",
-    "release": "npm run bumpPatchVersionWithGitTag"
+    "release": "npm run bumpPatchVersionWithGitTag",
+    "serve:dev": "nodemon src/index.js"
   },
   "files": [
     "src"
@@ -61,9 +62,12 @@
     "eslint": "8.27.0",
     "glob": "8.0.3",
     "husky": "8.0.2",
-    "mocha": "10.1.0"
+    "mocha": "10.1.0",
+    "nodemon" : "2.0.20"
   },
   "dependencies": {
-    "fastify": "4.9.2"
+    "fastify": "4.9.2",
+    "meilisearch" : "0.29.1",
+    "@aicore/libcommonutils" : "1.0.19"
   }
 }
