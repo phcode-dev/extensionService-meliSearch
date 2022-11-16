@@ -18,6 +18,13 @@
 
 // @INCLUDE_IN_API_DOCS
 
+import {start} from "./server.js";
+start();
+
+
+
+
+
 /**
  * Write your module docs here. tell something about this module in markdown.
  *
@@ -46,3 +53,4 @@ function helloWorld(name) {
 }
 
 export default helloWorld;
+
