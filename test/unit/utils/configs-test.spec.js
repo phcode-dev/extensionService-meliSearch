@@ -49,5 +49,4 @@ function _verifyConfigs(configs) {
     expect(configs.mysql.password.length).to.gt(0);
     expect(configs.mysql.host.length).to.gt(0);
     expect(configs.mysql.database.length).to.gt(0);
-
 }
